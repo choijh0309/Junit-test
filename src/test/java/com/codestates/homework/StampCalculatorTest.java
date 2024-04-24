@@ -20,7 +20,7 @@ public class StampCalculatorTest {
 
         // when
         int actual = StampCalculator.calculateStampCount(nowCount, earned);
-        int expected = 8;
+        int expected = nowCount + earned;
 
         // then
         Assertions.assertEquals(expected, actual);

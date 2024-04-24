@@ -26,11 +26,10 @@ public class RandomPasswordGeneratorTest {
         int expected = numberOfUpperCaseLetters + numberOfLowerCaseLetters + numberOfNumeric + numberOfSpecialChars;
 
         // then
-        assertEquals(password.length(), expected);
+        assertEquals(expected, password.length());
         assertEquals(numberOfUpperCaseLetters, password.chars().filter(Character::isUpperCase).count());
         assertEquals(numberOfLowerCaseLetters, password.chars().filter(Character::isLowerCase).count());
         assertEquals(numberOfNumeric, password.chars().filter(Character::isDigit).count());
         assertEquals(numberOfSpecialChars, password.chars().filter(c -> !Character.isLetterOrDigit(c)).count());
-
     }
 }
